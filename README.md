@@ -24,6 +24,11 @@ tum_rgbd_examples.sh是用于运行RGBD案例的
 
 这个部分借鉴类官方的sh文件
 
+示例：
+
+    cd Examples
+    ./tum_rgbd_examples.sh
+
 ## 运行 ROS案例（自己摄像头的案例）
 自己摄像头的案例的话，没有借鉴rgbd_tum.cc去改，而是想直接使用ROS节点去接受话题，从而实现自建图
 
@@ -33,7 +38,11 @@ tum_rgbd_examples.sh是用于运行RGBD案例的
 1.  /image_raw
 2.  /camera/depth/image
 
+示例：
 
+    roscore
+    cd [workspace] && rosrun ORB_SLAM3 RGBD ./Vocabulary/ORBvoc.txt ./Examples/RGB-D/[yours cam].yaml
+    rosbag play [yors bag].bag
 
 # ORB-SLAM3
 
