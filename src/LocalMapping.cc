@@ -395,7 +395,7 @@ void LocalMapping::Run()
         {
             mpPointCloudMapping->AinsertKeyFrame( ApKF[i], AmvImage, AmvDepth, false, false ); //修改地方
         }
-        // usleep(1.5e5);
+        usleep(1e5);
     }
     cout<<"稠密点云处理完成！"<< endl;
 
